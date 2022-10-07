@@ -1,0 +1,11 @@
+class Sumoftwo(object):
+    def twoSum(self, nums, final):
+        result = {}
+        for i in range(len(nums)):
+            if final - nums[i] in result:
+                return [result[final - nums[i]],i]
+            else:
+                result[nums[i]]=i
+input_array = [2,3,5,7]
+obj1 = Sumoftwo()
+print(obj1.twoSum(input_array, 12))
